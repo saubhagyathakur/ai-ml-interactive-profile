@@ -1,0 +1,22 @@
+{
+  "name": "ai-ml-interactive-profile",
+  "version": "2.0.0",
+  "description": "Interactive AI/ML Portfolio & Enterprise System Demonstrator by Dr. Alex Vance (10+ Years Senior Architect)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "ai",
+    "machine-learning",
+    "portfolio",
+    "interactive",
+    "mlops",
+    "vllm",
+    "neural-network",
+    "tensorrt"
+  ],
+  "author": "Dr. Alex Vance",
+  "license": "MIT"
+}

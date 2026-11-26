@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Alex Vance, Ph.D. | Principal AI/ML Architect & Senior Staff Engineer</title>
+  <meta name="description" content="Interactive AI/ML Portfolio & System Demonstrator of Dr. Alex Vance. 10+ Years Experience in Distributed Deep Learning, LLM Serving, Edge Vision, and High-Throughput MLOps.">
+
+  <!-- Google Fonts: Inter & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN for utility helpers -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyan: { 400: '#00f0ff', 500: '#0284c7' },
+            slate: { 850: '#0e172a', 950: '#030712' }
+          },
+          fontFamily: {
+            mono: ['"Fira Code"', 'monospace'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="cyber-grid-bg">
+
+  <!-- Interactive 60fps Neural Network Canvas Background -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Global Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon"><i class="fas fa-brain"></i></div>
+        <div>
+          <div class="brand-name text-white">NEXUS<span class="text-cyan-400">.AI</span></div>
+          <div class="text-[10px] font-mono text-cyan-400/80 -mt-1 tracking-wider">DR. ALEX VANCE // PRINCIPAL ARCHITECT</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links hidden md:flex">
+        <a href="#ecosystem" class="nav-link">Ecosystem</a>
+        <a href="#labs" class="nav-link">Live Labs</a>
+        <a href="#architecture" class="nav-link">MLOps Stack</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#copilot" class="nav-link">AI Twin</a>
+        <a href="#terminal" class="nav-link">CLI</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-3">
+        <button id="audio-toggle" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center hover:border-cyan-400 transition-colors" title="Toggle Synthesized Sci-Fi UI Audio">
+          <i class="fas fa-volume-up text-cyan-400"></i>
+        </button>
+
+        <button id="btn-download-cv" class="btn btn-sm btn-primary">
+          <i class="fas fa-file-pdf"></i> Resume / CV
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden w-9 h-9 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center text-white">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden fixed top-[70px] left-0 w-full bg-slate-950/95 border-b border-slate-800 p-6 z-50 backdrop-blur-xl flex flex-col gap-4 font-mono text-sm">
+      <a href="#ecosystem" class="mobile-link text-gray-300 hover:text-cyan-400">01. Industry Ecosystem</a>
+      <a href="#labs" class="mobile-link text-gray-300 hover:text-cyan-400">02. Live AI Labs</a>
+      <a href="#architecture" class="mobile-link text-gray-300 hover:text-cyan-400">03. MLOps Architecture</a>
+      <a href="#projects" class="mobile-link text-gray-300 hover:text-cyan-400">04. Production Projects</a>
+      <a href="#copilot" class="mobile-link text-gray-300 hover:text-cyan-400">05. AI Copilot Twin</a>
+      <a href="#terminal" class="mobile-link text-gray-300 hover:text-cyan-400">06. Developer Terminal</a>
+      <a href="#contact" class="mobile-link text-gray-300 hover:text-cyan-400">07. Direct Transmission</a>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- ==========================================
+           HERO SECTION
+           ========================================== -->
+      <section class="hero-section">
+        <div class="max-w-3xl">
+          <div class="system-status-pill">
+            <span class="pulse-dot"></span>
+            <span>INFERENCE FLEET ONLINE: 9.4ms p95 SLA</span>
+          </div>
+
+          <h1 class="hero-title">
+            Architecting <span class="text-gradient">Next-Gen Intelligence</span> at Scale.
+          </h1>
+
+          <p class="hero-subtitle">
+            Senior AI/ML Architect & Staff Engineer with <strong>10+ years</strong> designing distributed Deep Learning infrastructure, high-throughput LLM inference clusters (vLLM / TensorRT), and edge computer vision for global Fortune 500 enterprises.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#ecosystem" class="btn btn-primary">
+              <i class="fas fa-satellite-dish"></i> Explore AI/ML Ecosystem
+            </a>
+            <a href="#labs" class="btn btn-secondary">
+              <i class="fas fa-flask"></i> Launch Live Labs
+            </a>
+            <a href="#copilot" class="btn btn-secondary">
+              <i class="fas fa-comments"></i> Query AI Twin
+            </a>
+          </div>
+        </div>
+
+        <!-- System Metrics Strip -->
+        <div id="system-metrics" class="telemetry-strip">
+          <div class="telemetry-card">
+            <span class="telemetry-val counter-val" data-target="248.5" data-suffix="M+" data-decimals="1">0.0M+</span>
+            <span class="telemetry-label">Production Inferences Served</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-val counter-val" data-target="9.4" data-suffix="ms" data-decimals="1">0.0ms</span>
+            <span class="telemetry-label">Global Fleet p95 Latency</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-val counter-val" data-target="64.2" data-suffix="%" data-decimals="1">0.0%</span>
+            <span class="telemetry-label">VRAM Saved via Quantization</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-val counter-val" data-target="14" data-suffix=" Papers/Patents" data-decimals="0">0</span>
+            <span class="telemetry-label">US Patents & Top-Tier NeurIPS/ICLR</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           ECOSYSTEM RADAR SECTION (Directly Realizing Uploaded Diagram)
+           ========================================== -->
+      <section id="ecosystem" class="ecosystem-section">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="badge-pill bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 mb-3">
+            <i class="fas fa-project-diagram mr-2"></i>Multi-Industry AI/ML Hub
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Unified Artificial Intelligence Ecosystem
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            Click on any orbiting industry satellite to inspect production architectures, latency benchmarks, case studies, and real-world enterprise deployments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Interactive Radar Orbital Canvas (Left 7 Columns) -->
+          <div class="lg:col-span-7 flex flex-col items-center">
+            
+            <div id="ecosystem-radar" class="radar-wrapper">
+              <!-- Orbit Rings -->
+              <div class="orbit-ring orbit-ring-1"></div>
+              <div class="orbit-ring orbit-ring-2"></div>
+
+              <!-- Central AI/ML Core Pedestal -->
+              <div class="core-node" title="Click to view overall AI/ML System Blueprint">
+                <span class="core-node-text">AI</span>
+                <span class="core-node-text -mt-2">ML</span>
+                <span class="core-node-sub">CORE HUB</span>
+              </div>
+
+              <!-- Satellite Nodes (Matching User's Uploaded Architecture Diagram) -->
+              <!-- 1. Smart Retail & E-Commerce (Cart icon) -->
+              <div class="satellite-node active" data-id="retail" title="Smart Retail & E-Commerce">
+                <i class="fas fa-shopping-cart text-[#00f0ff]"></i>
+              </div>
+
+              <!-- 2. Predictive Analytics & Growth (Chart icon) -->
+              <div class="satellite-node" data-id="analytics" title="Predictive Growth & Analytics">
+                <i class="fas fa-chart-line text-[#10b981]"></i>
+              </div>
+
+              <!-- 3. Talent Intelligence & Conversational AI (People icon) -->
+              <div class="satellite-node" data-id="talent" title="Talent Intelligence & Conversational Agents">
+                <i class="fas fa-user-friends text-[#8b5cf6]"></i>
+              </div>
+
+              <!-- 4. Fintech, Banking & Governance (Bank icon) -->
+              <div class="satellite-node" data-id="fintech" title="Fintech, Banking & Governance">
+                <i class="fas fa-landmark text-[#f59e0b]"></i>
+              </div>
+
+              <!-- 5. Medical AI & Clinical Diagnostics (Medical Cross icon) -->
+              <div class="satellite-node" data-id="health" title="Medical AI & Clinical Diagnostics">
+                <i class="fas fa-plus text-[#ec4899]"></i>
+              </div>
+
+              <!-- 6. Autonomous Logistics & Supply Chain (Truck icon) -->
+              <div class="satellite-node" data-id="logistics" title="Autonomous Logistics & Supply Chain">
+                <i class="fas fa-truck text-[#3b82f6]"></i>
+              </div>
+
+              <!-- 7. Smart Factory & Industrial IoT (Factory icon) -->
+              <div class="satellite-node" data-id="factory" title="Smart Factory & Industrial IoT">
+                <i class="fas fa-industry text-[#06b6d4]"></i>
+              </div>
+            </div>
+
+            <!-- Radar Controls -->
+            <div class="flex items-center gap-4 mt-6">
+              <button id="btn-pause-orbit" class="btn btn-sm btn-secondary">
+                <i class="fas fa-pause"></i> Freeze Orbit
+              </button>
+              <button onclick="window.ecosystemHub.openModal('overview')" class="btn btn-sm btn-secondary">
+                <i class="fas fa-image"></i> View Blueprint Architecture
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Live Node Inspector Panel (Right 5 Columns) -->
+          <div class="lg:col-span-5">
+            <div id="ecosystem-inspector" class="glass-panel ecosystem-panel">
+              <!-- Dynamically populated by ecosystem-hub.js -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           INTERACTIVE MINI-LABS SECTION
+           ========================================== -->
+      <section id="labs" class="labs-section">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="badge-pill bg-purple-500/10 text-purple-400 border border-purple-500/30 mb-3">
+            <i class="fas fa-terminal mr-2"></i>In-Browser AI Engineering Labs
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Hands-On Interactive AI Sandboxes
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            Execute real neural training, inspect BPE token embeddings, simulate edge computer vision, and stress-test MLOps drift detectors directly in your browser.
+          </p>
+        </div>
+
+        <!-- Lab Navigation Tabs -->
+        <div class="lab-tabs justify-center">
+          <button class="lab-tab-btn active" data-target="lab-neural">
+            <i class="fas fa-network-wired mr-2"></i>2D Neural Classifier
+          </button>
+          <button class="lab-tab-btn" data-target="lab-vector">
+            <i class="fas fa-cubes mr-2"></i>LLM Tokenizer & Vector Space
+          </button>
+          <button class="lab-tab-btn" data-target="lab-vision">
+            <i class="fas fa-eye mr-2"></i>Edge Vision & Defect QA
+          </button>
+          <button class="lab-tab-btn" data-target="lab-drift">
+            <i class="fas fa-wave-square mr-2"></i>MLOps Drift Detector
+          </button>
+        </div>
+
+        <!-- LAB 1: 2D Neural Classifier -->
+        <div id="lab-neural" class="lab-panel glass-panel p-6">
+          <div class="lab-container">
+            <!-- Canvas Display -->
+            <div class="canvas-box">
+              <div class="canvas-header">
+                <span class="text-cyan-400"><i class="fas fa-layer-group mr-1"></i>Decision Boundary Surface</span>
+                <span class="text-gray-400">Epoch: <strong id="nn-epoch" class="text-white">0</strong> | Loss: <strong id="nn-loss" class="text-cyan-400">0.0000</strong></span>
+              </div>
+              <canvas id="nn-canvas" width="460" height="340" class="w-full h-auto block"></canvas>
+              <!-- Loss sparkline -->
+              <div class="p-3 bg-slate-950/80 border-t border-slate-800 flex items-center justify-between">
+                <span class="text-[11px] font-mono text-gray-400">Loss Curve (Cross-Entropy):</span>
+                <canvas id="loss-canvas" width="220" height="30" class="bg-slate-900 rounded"></canvas>
+              </div>
+            </div>
+
+            <!-- Controls Panel -->
+            <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+              <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <i class="fas fa-sliders-h text-cyan-400"></i> Hyperparameter Tuning
+              </h3>
+              
+              <div class="ctrl-group">
+                <label class="ctrl-label">Dataset Topology</label>
+                <select id="nn-dataset" class="input-cyber">
+                  <option value="circle">Concentric Circles (Non-linear)</option>
+                  <option value="spiral">Twin Spirals (Hardest Non-linear)</option>
+                  <option value="xor">Exclusive OR (XOR Multi-Cluster)</option>
+                  <option value="moons">Interleaved Two Moons</option>
+                </select>
+              </div>
+
+              <div class="ctrl-group">
+                <div class="ctrl-label">
+                  <span>Learning Rate (SGD)</span>
+                  <span id="nn-lr-val" class="text-cyan-400">0.030</span>
+                </div>
+                <input type="range" id="nn-lr" min="0.005" max="0.1" step="0.005" value="0.030">
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="ctrl-group">
+                  <label class="ctrl-label">Activation</label>
+                  <select id="nn-activation" class="input-cyber">
+                    <option value="relu">ReLU</option>
+                    <option value="gelu">GELU (Transformers)</option>
+                    <option value="tanh">Tanh</option>
+                    <option value="sigmoid">Sigmoid</option>
+                  </select>
+                </div>
+                <div class="ctrl-group">
+                  <label class="ctrl-label">Hidden Neurons</label>
+                  <select id="nn-neurons" class="input-cyber">
+                    <option value="4">4 Units</option>
+                    <option value="8" selected>8 Units</option>
+                    <option value="16">16 Units</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <button id="nn-btn-toggle" class="btn btn-primary flex-1">
+                  <i class="fas fa-play mr-1"></i> Train Model
+                </button>
+                <button id="nn-btn-reset" class="btn btn-secondary">
+                  <i class="fas fa-redo"></i> Reset
+                </button>
+              </div>
+
+              <p class="text-xs text-gray-500 mt-4 leading-relaxed font-mono">
+                *Backpropagation and dynamic gradient descent calculated live in real time using client-side JavaScript.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LAB 2: LLM Tokenizer & 2D Vector Space -->
+        <div id="lab-vector" class="lab-panel glass-panel p-6 hidden">
+          <div class="lab-container">
+            <!-- 2D Vector Canvas -->
+            <div class="canvas-box">
+              <div class="canvas-header">
+                <span class="text-cyan-400"><i class="fas fa-project-diagram mr-1"></i>2D Semantic Cosine Space</span>
+                <span class="text-gray-400">LLaMA-3 / Mistral BPE Simulation</span>
+              </div>
+              <canvas id="vector-canvas" width="460" height="320" class="w-full h-auto block"></canvas>
+              <div id="similarity-list" class="p-4 bg-slate-950 border-t border-slate-800 space-y-2">
+                <!-- Populated by vector-explorer.js -->
+              </div>
+            </div>
+
+            <!-- Tokenizer Inspector -->
+            <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+              <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                <i class="fas fa-brain text-cyan-400"></i> Prompt & Token Inspector
+              </h3>
+
+              <div class="flex flex-wrap gap-2 mb-3">
+                <button class="preset-btn btn-sm btn-secondary text-xs" data-text="Attention is all you need for large transformers.">Preset 1: Attention</button>
+                <button class="preset-btn btn-sm btn-secondary text-xs" data-text="Deploying quantized YOLOv10 on NVIDIA Jetson edge robotics.">Preset 2: Edge Vision</button>
+                <button class="preset-btn btn-sm btn-secondary text-xs" data-text="Real-time multi-armed bandits in Triton inference server.">Preset 3: MLOps</button>
+              </div>
+
+              <textarea id="token-input" rows="3" class="input-cyber w-full mb-3 resize-none" placeholder="Type prompt here to inspect subword token decomposition and semantic projection...">Attention is all you need for high-throughput LLM serving.</textarea>
+
+              <div class="grid grid-cols-3 gap-2 text-center font-mono text-xs mb-3">
+                <div class="p-2 bg-slate-950 rounded border border-slate-800">
+                  <span class="text-gray-400 block">Tokens</span>
+                  <span id="token-count" class="text-cyan-400 font-bold text-sm">0</span>
+                </div>
+                <div class="p-2 bg-slate-950 rounded border border-slate-800">
+                  <span class="text-gray-400 block">Characters</span>
+                  <span id="char-count" class="text-white font-bold text-sm">0</span>
+                </div>
+                <div class="p-2 bg-slate-950 rounded border border-slate-800">
+                  <span class="text-gray-400 block">Est. Compute</span>
+                  <span id="token-flops" class="text-purple-400 font-bold text-sm">0 TFLOPs</span>
+                </div>
+              </div>
+
+              <div class="ctrl-label"><span>Subword BPE Token Segmentation</span></div>
+              <div id="tokens-output" class="tokens-stream"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LAB 3: Edge Vision & Defect Detection -->
+        <div id="lab-vision" class="lab-panel glass-panel p-6 hidden">
+          <div class="lab-container">
+            <!-- Simulated Video Feed Canvas -->
+            <div class="canvas-box">
+              <div class="canvas-header">
+                <span class="text-cyan-400"><i class="fas fa-video mr-1"></i>Live Camera Feed Telemetry</span>
+                <span id="vision-det-count" class="badge-pill bg-cyan-400/20 text-cyan-400 text-xs">Analyzing...</span>
+              </div>
+              <canvas id="vision-canvas" width="460" height="300" class="w-full h-auto block"></canvas>
+              <div class="p-3 bg-slate-950 border-t border-slate-800 flex justify-between font-mono text-xs text-gray-400">
+                <span>Model: <strong id="vision-model-sub" class="text-cyan-300">YOLOv10-Nano (TensorRT FP16)</strong></span>
+                <span>Throughput: <strong id="vision-telemetry-fps" class="text-emerald-400">182 FPS</strong></span>
+                <span>Latency: <strong id="vision-telemetry-lat" class="text-cyan-400">5.4 ms</strong></span>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+              <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <i class="fas fa-camera text-cyan-400"></i> Video Stream & Post-Processing
+              </h3>
+
+              <div class="ctrl-group">
+                <label class="ctrl-label">Inference Domain Feed</label>
+                <select id="vision-feed-select" class="input-cyber">
+                  <option value="factory">Smart Factory: PCB Solder Defect QA</option>
+                  <option value="medical">Healthcare: Clinical MRI Axial Scan</option>
+                  <option value="retail">Retail: Autonomous Item Barcode Scanner</option>
+                  <option value="fleet">Logistics: Autonomous Fleet Highway Stream</option>
+                </select>
+              </div>
+
+              <div class="ctrl-group">
+                <div class="ctrl-label">
+                  <span>Confidence Threshold ($\tau_{conf}$)</span>
+                  <span id="vision-conf-val" class="text-cyan-400 font-bold">70%</span>
+                </div>
+                <input type="range" id="vision-conf-slider" min="0.2" max="0.99" step="0.05" value="0.70">
+              </div>
+
+              <div class="ctrl-group">
+                <div class="ctrl-label">
+                  <span>Non-Max Suppression IoU ($\tau_{iou}$)</span>
+                  <span id="vision-iou-val" class="text-cyan-400 font-bold">0.50</span>
+                </div>
+                <input type="range" id="vision-iou-slider" min="0.1" max="0.9" step="0.05" value="0.50">
+              </div>
+
+              <div class="p-3 bg-slate-950 rounded border border-slate-800 text-xs font-mono text-gray-400">
+                <div class="flex justify-between mb-1">
+                  <span>Target Hardware:</span>
+                  <span class="text-white">NVIDIA Jetson AGX Orin (64GB)</span>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span>Precision:</span>
+                  <span class="text-cyan-400">INT8 Calibrated (Entropy Loss &lt; 0.02)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Thermal Envelope:</span>
+                  <span class="text-emerald-400">22.4 Watts Nominal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LAB 4: MLOps Streaming Drift Detector -->
+        <div id="lab-drift" class="lab-panel glass-panel p-6 hidden">
+          <div class="lab-container">
+            <!-- Streaming Chart Canvas -->
+            <div class="canvas-box">
+              <div class="canvas-header">
+                <span class="text-cyan-400"><i class="fas fa-chart-area mr-1"></i>Real-Time Statistical Drift Stream</span>
+                <span id="drift-alert-badge" class="badge-pill bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">MODEL HEALTH: NOMINAL</span>
+              </div>
+              <canvas id="drift-canvas" width="460" height="260" class="w-full h-auto block"></canvas>
+              <div class="p-3 bg-slate-950 border-t border-slate-800 flex justify-between font-mono text-xs text-gray-400">
+                <span>KS-Test Statistic: <strong id="drift-ks-val" class="text-cyan-400">0.120</strong></span>
+                <span>Latency p99: <strong id="drift-p99-val" class="text-white">10.2 ms</strong></span>
+              </div>
+            </div>
+
+            <!-- Controls & Log Stream -->
+            <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+              <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <i class="fas fa-shield-alt text-cyan-400"></i> Chaos Engineering & Auto-Retraining
+              </h3>
+
+              <div class="grid grid-cols-2 gap-2 mb-4">
+                <button id="btn-inject-drift" class="btn btn-secondary text-xs">
+                  <i class="fas fa-bolt text-amber-400"></i> Inject Concept Drift
+                </button>
+                <button id="btn-inject-outlier" class="btn btn-secondary text-xs">
+                  <i class="fas fa-exclamation-triangle text-rose-400"></i> Inject Outlier Spike
+                </button>
+              </div>
+
+              <button id="btn-trigger-retrain" class="btn btn-primary w-full mb-4">
+                <i class="fas fa-sync-alt mr-2"></i> Trigger Automated Ray-Train Retrain
+              </button>
+
+              <div class="ctrl-label"><span>Live MLOps Event Stream:</span></div>
+              <div id="drift-log-stream" class="h-32 overflow-y-auto bg-slate-950 border border-slate-800 rounded p-2 text-xs font-mono space-y-1">
+                <div class="text-gray-500">[System] Real-time Kolmogorov-Smirnov observer active on Kafka input topic...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==========================================
+           PRODUCTION ARCHITECTURE & MLOPS SHOWCASE
+           ========================================== -->
+      <section id="architecture" class="py-20">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="badge-pill bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 mb-3">
+            <i class="fas fa-microchip mr-2"></i>System Architecture
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            End-to-End Enterprise MLOps Pipeline
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            Battle-tested architecture designed for fault-tolerant distributed training, continuous shadow evaluation, and ultra-high throughput model serving.
+          </p>
+        </div>
+
+        <div class="pipeline-flow">
+          <!-- Step 1 -->
+          <div class="pipeline-step glass-panel">
+            <div class="step-num">LAYER 01 // INGESTION</div>
+            <div class="step-title">Streaming & Feature Store</div>
+            <p class="step-desc">Apache Kafka & Flink event streams feeding Feast feature store with Redis for sub-3ms online inference lookups and Delta Lake for offline training datasets.</p>
+            <div class="tech-tags mt-4">
+              <span class="tech-pill">Kafka</span>
+              <span class="tech-pill">Feast</span>
+              <span class="tech-pill">Redis</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="pipeline-step glass-panel">
+            <div class="step-num">LAYER 02 // TRAINING</div>
+            <div class="step-title">Distributed Deep Learning</div>
+            <p class="step-desc">PyTorch FSDP + DeepSpeed ZeRO-3 orchestrating multi-node clusters via Ray Train. Automated mixed precision (BF16) and gradient checkpointing.</p>
+            <div class="tech-tags mt-4">
+              <span class="tech-pill">PyTorch FSDP</span>
+              <span class="tech-pill">Ray Train</span>
+              <span class="tech-pill">DeepSpeed</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="pipeline-step glass-panel">
+            <div class="step-num">LAYER 03 // EVAL & GUARDRAILS</div>
+            <div class="step-title">Validation & Guardrails</div>
+            <p class="step-desc">Continuous automated unit tests on synthetic datasets, NeMo Guardrails for jailbreak/hallucination defense, and SHAP explainability matrices.</p>
+            <div class="tech-tags mt-4">
+              <span class="tech-pill">NeMo Guardrails</span>
+              <span class="tech-pill">Giskard</span>
+              <span class="tech-pill">SHAP</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="pipeline-step glass-panel">
+            <div class="step-num">LAYER 04 // SERVING</div>
+            <div class="step-title">High-Throughput Serving</div>
+            <p class="step-desc">NVIDIA Triton Inference Server with dynamic batching alongside vLLM PagedAttention engines and TensorRT FP8 quantization.</p>
+            <div class="tech-tags mt-4">
+              <span class="tech-pill">vLLM</span>
+              <span class="tech-pill">NVIDIA Triton</span>
+              <span class="tech-pill">TensorRT</span>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="pipeline-step glass-panel">
+            <div class="step-num">LAYER 05 // OBSERVABILITY</div>
+            <div class="step-title">Drift & Fleet Telemetry</div>
+            <p class="step-desc">Evidently AI statistical shift alerts, Prometheus metric scrapers, and automated shadow deployment canary evaluation on Kubernetes.</p>
+            <div class="tech-tags mt-4">
+              <span class="tech-pill">Evidently AI</span>
+              <span class="tech-pill">Prometheus</span>
+              <span class="tech-pill">Grafana</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           FEATURED PROJECTS PORTFOLIO
+           ========================================== -->
+      <section id="projects" class="py-20">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="badge-pill bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 mb-3">
+            <i class="fas fa-folder-open mr-2"></i>Production Showcase
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Featured Enterprise Projects
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            High-impact systems architected and deployed into production over a 10+ year trajectory.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          <button class="project-filter-btn btn-sm btn-secondary active" data-filter="all">All Projects</button>
+          <button class="project-filter-btn btn-sm btn-secondary" data-filter="genai">LLMs & GenAI</button>
+          <button class="project-filter-btn btn-sm btn-secondary" data-filter="vision">Computer Vision</button>
+          <button class="project-filter-btn btn-sm btn-secondary" data-filter="mlops">Distributed MLOps</button>
+          <button class="project-filter-btn btn-sm btn-secondary" data-filter="rl">Time-Series & RL</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <div class="glass-panel project-card interactive-card" data-category="genai mlops">
+            <div class="project-card-header">
+              <div class="flex justify-between items-start">
+                <span class="text-xs font-mono text-cyan-400">LLM INFERENCE GATEWAY</span>
+                <span class="badge-pill bg-cyan-400/10 text-cyan-400 border border-cyan-400/30">PATENTED</span>
+              </div>
+              <h3 class="project-title">OmniServe-LLM</h3>
+              <p class="project-desc">Distributed high-throughput LLM serving engine built with PagedAttention and speculative decoding, handling 15,000 req/sec across Kubernetes GPU nodes.</p>
+              <div class="project-metric-tag">
+                <i class="fas fa-tachometer-alt"></i> 10x Throughput / -45% Token Latency
+              </div>
+            </div>
+            <div>
+              <div class="tech-tags mb-4">
+                <span class="tech-pill">vLLM</span>
+                <span class="tech-pill">TensorRT-LLM</span>
+                <span class="tech-pill">Ray Serve</span>
+                <span class="tech-pill">CUDA C++</span>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-primary flex-1" onclick="window.ecosystemHub.openModal('retail')">Architecture Specs</button>
+                <a href="#labs" class="btn btn-sm btn-secondary"><i class="fas fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="glass-panel project-card interactive-card" data-category="vision mlops">
+            <div class="project-card-header">
+              <div class="flex justify-between items-start">
+                <span class="text-xs font-mono text-cyan-400">EDGE COMPUTER VISION</span>
+                <span class="badge-pill bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">PRODUCTION</span>
+              </div>
+              <h3 class="project-title">NeuroVision-Edge</h3>
+              <p class="project-desc">Real-time industrial PCB and automotive defect inspection unit running INT8 quantized YOLOv10 and Swin-Transformers at 240 FPS on NVIDIA Jetson AGX Orin.</p>
+              <div class="project-metric-tag">
+                <i class="fas fa-check-double"></i> 99.94% Defect Accuracy / 240 FPS
+              </div>
+            </div>
+            <div>
+              <div class="tech-tags mb-4">
+                <span class="tech-pill">TensorRT INT8</span>
+                <span class="tech-pill">YOLOv10</span>
+                <span class="tech-pill">Jetson Orin</span>
+                <span class="tech-pill">OpenCV</span>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-primary flex-1" onclick="window.ecosystemHub.openModal('factory')">Architecture Specs</button>
+                <a href="#labs" class="btn btn-sm btn-secondary"><i class="fas fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="glass-panel project-card interactive-card" data-category="genai vision">
+            <div class="project-card-header">
+              <div class="flex justify-between items-start">
+                <span class="text-xs font-mono text-cyan-400">CLINICAL HEALTHCARE AI</span>
+                <span class="badge-pill bg-rose-500/10 text-rose-400 border border-rose-500/30">HIPAA CERTIFIED</span>
+              </div>
+              <h3 class="project-title">AuraHealth-RAG</h3>
+              <p class="project-desc">Multimodal medical reasoning assistant combining EHR tabular data with volumetric 3D MRI scans, featuring federated privacy across 42 hospitals.</p>
+              <div class="project-metric-tag">
+                <i class="fas fa-heartbeat"></i> 0.924 Dice Score / Zero Data Leak
+              </div>
+            </div>
+            <div>
+              <div class="tech-tags mb-4">
+                <span class="tech-pill">MONAI</span>
+                <span class="tech-pill">NVFlare</span>
+                <span class="tech-pill">Swin-UNETR</span>
+                <span class="tech-pill">LangChain</span>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-primary flex-1" onclick="window.ecosystemHub.openModal('health')">Architecture Specs</button>
+                <a href="#labs" class="btn btn-sm btn-secondary"><i class="fas fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="glass-panel project-card interactive-card" data-category="rl">
+            <div class="project-card-header">
+              <div class="flex justify-between items-start">
+                <span class="text-xs font-mono text-cyan-400">REINFORCEMENT LEARNING</span>
+                <span class="badge-pill bg-amber-500/10 text-amber-400 border border-amber-500/30">ENTERPRISE</span>
+              </div>
+              <h3 class="project-title">ChronoForecast-RL</h3>
+              <p class="project-desc">Autonomous multi-echelon supply chain optimizer combining Temporal Fusion Transformers with Proximal Policy Optimization (PPO) for dynamic fleet routing.</p>
+              <div class="project-metric-tag">
+                <i class="fas fa-dollar-sign"></i> $8.6M Annual Fuel & Spoilage Savings
+              </div>
+            </div>
+            <div>
+              <div class="tech-tags mb-4">
+                <span class="tech-pill">Ray RLlib</span>
+                <span class="tech-pill">PPO</span>
+                <span class="tech-pill">Temporal Fusion</span>
+                <span class="tech-pill">Kafka</span>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-primary flex-1" onclick="window.ecosystemHub.openModal('logistics')">Architecture Specs</button>
+                <a href="#labs" class="btn btn-sm btn-secondary"><i class="fas fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="glass-panel project-card interactive-card" data-category="mlops">
+            <div class="project-card-header">
+              <div class="flex justify-between items-start">
+                <span class="text-xs font-mono text-cyan-400">FINTECH ANTI-FRAUD</span>
+                <span class="badge-pill bg-yellow-500/10 text-yellow-400 border border-yellow-500/30">SUB-4MS SLA</span>
+              </div>
+              <h3 class="project-title">CyberGuard-Net</h3>
+              <p class="project-desc">Real-time heterogeneous Graph Neural Network processing 80,000 credit card transactions per second at &lt;3.8ms p99 latency with automated SHAP explanations.</p>
+              <div class="project-metric-tag">
+                <i class="fas fa-shield-alt"></i> 99.85% Intercept / -71% False Positives
+              </div>
+            </div>
+            <div>
+              <div class="tech-tags mb-4">
+                <span class="tech-pill">PyTorch Geometric</span>
+                <span class="tech-pill">Triton</span>
+                <span class="tech-pill">Flink</span>
+                <span class="tech-pill">SHAP</span>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-primary flex-1" onclick="window.ecosystemHub.openModal('fintech')">Architecture Specs</button>
+                <a href="#labs" class="btn btn-sm btn-secondary"><i class="fas fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="glass-panel project-card interactive-card" data-category="genai">
+            <div class="project-card-header">
+              <div class="flex justify-between items-start">
+                <span class="text-xs font-mono text-cyan-400">DIFFUSION GENERATION</span>
+                <span class="badge-pill bg-purple-500/10 text-purple-400 border border-purple-500/30">RESEARCH</span>
+              </div>
+              <h3 class="project-title">SynthBio-Gen</h3>
+              <p class="project-desc">Geometric 3D diffusion generative model for accelerated molecular docking and targeted kinase inhibitor candidate design, cutting pre-clinical screening by 70%.</p>
+              <div class="project-metric-tag">
+                <i class="fas fa-dna"></i> 3.4x Higher Binding Affinity Yield
+              </div>
+            </div>
+            <div>
+              <div class="tech-tags mb-4">
+                <span class="tech-pill">E(3)-Equivariant GNN</span>
+                <span class="tech-pill">DiffDock</span>
+                <span class="tech-pill">PyTorch</span>
+                <span class="tech-pill">RDKit</span>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-primary flex-1" onclick="window.ecosystemHub.openModal('overview')">Architecture Specs</button>
+                <a href="#labs" class="btn btn-sm btn-secondary"><i class="fas fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           CAREER TIMELINE & LEADERSHIP
+           ========================================== -->
+      <section class="py-20">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="badge-pill bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 mb-3">
+            <i class="fas fa-history mr-2"></i>10+ Years Trajectory
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Senior Engineering & Architectural Leadership
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            From deep theoretical research in distributed attention to principal architectural ownership across global engineering organizations.
+          </p>
+        </div>
+
+        <div class="space-y-6 max-w-4xl mx-auto">
+          <!-- Item 1 -->
+          <div class="glass-panel p-6 border-l-4 border-cyan-400">
+            <div class="flex flex-wrap justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-white">Principal AI/ML Architect & Senior Staff Engineer</h3>
+              <span class="badge-pill bg-cyan-400/10 text-cyan-400 font-mono">2022 - PRESENT</span>
+            </div>
+            <div class="text-cyan-400 font-mono text-sm mb-3">Nexus Enterprise AI Technologies // San Francisco, CA</div>
+            <p class="text-gray-300 text-sm leading-relaxed mb-3">
+              Direct the foundational architecture for the enterprise generative AI platform powering 40M+ active users. Scaled GPU inference cluster to 15,000 tokens/sec via custom PagedAttention and Triton kernels. Mentored 28 machine learning engineers and secured 2 key patents in distributed key-value cache eviction.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-pill">Kubernetes</span>
+              <span class="tech-pill">vLLM</span>
+              <span class="tech-pill">NVIDIA Triton</span>
+              <span class="tech-pill">DeepSpeed</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="glass-panel p-6 border-l-4 border-purple-500">
+            <div class="flex flex-wrap justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-white">Staff Machine Learning Engineer & Tech Lead</h3>
+              <span class="badge-pill bg-purple-500/10 text-purple-400 font-mono">2018 - 2022</span>
+            </div>
+            <div class="text-purple-400 font-mono text-sm mb-3">Apex Global Intelligence // New York, NY</div>
+            <p class="text-gray-300 text-sm leading-relaxed mb-3">
+              Architected real-time recommendation engines and fraud-detection graph neural networks processing $60B+ annually. Dropped p99 transaction scoring latency from 45ms to 3.8ms and saved $14.8M in false-positive merchant losses.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-pill">PyTorch Geometric</span>
+              <span class="tech-pill">Apache Kafka</span>
+              <span class="tech-pill">TensorRT</span>
+              <span class="tech-pill">Feast</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="glass-panel p-6 border-l-4 border-emerald-500">
+            <div class="flex flex-wrap justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-white">Senior Computer Vision & Deep Learning Researcher</h3>
+              <span class="badge-pill bg-emerald-500/10 text-emerald-400 font-mono">2014 - 2018</span>
+            </div>
+            <div class="text-emerald-400 font-mono text-sm mb-3">Applied AI Vision Labs // Boston, MA</div>
+            <p class="text-gray-300 text-sm leading-relaxed mb-3">
+              Conducted applied research in medical image segmentation and industrial robotics. Designed custom 3D convolutional models published in CVPR and MICCAI, achieving FDA clearance on clinical decision support modules.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-pill">CUDA C++</span>
+              <span class="tech-pill">TensorFlow</span>
+              <span class="tech-pill">OpenCV</span>
+              <span class="tech-pill">Docker</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           INTERACTIVE AI TWIN / COPILOT
+           ========================================== -->
+      <section id="copilot" class="py-20">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="badge-pill bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 mb-3">
+            <i class="fas fa-robot mr-2"></i>Virtual Technical Interview
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Ask Dr. Alex Vance's AI Twin
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            Inquire about system design tradeoffs, quantization benchmarks, team scaling philosophy, or interview availability.
+          </p>
+        </div>
+
+        <div class="chat-container glass-panel">
+          <!-- Messages Scroll View -->
+          <div id="chat-messages" class="chat-messages">
+            <div class="chat-bubble chat-bot">
+              <div class="chat-avatar bot-avatar"><i class="fas fa-brain"></i></div>
+              <div class="chat-content">
+                Greetings. I am Dr. Alex Vance's interactive AI Copilot. Ask me any question regarding my <strong>10+ years of engineering experience</strong>, high-throughput LLM architectures, edge vision deployments, or distributed MLOps best practices!
+              </div>
+            </div>
+          </div>
+
+          <!-- Suggested Chips -->
+          <div class="chat-chips-bar">
+            <button class="chat-chip">"What is your LLM serving stack?"</button>
+            <button class="chat-chip">"Tell me about your MLOps pipeline"</button>
+            <button class="chat-chip">"How do you handle edge vision on Jetson?"</button>
+            <button class="chat-chip">"What are your key patents?"</button>
+            <button class="chat-chip">"How can I hire or contact you?"</button>
+          </div>
+
+          <!-- Input Bar -->
+          <div class="chat-input-bar">
+            <input type="text" id="chat-input" class="input-cyber flex-1" placeholder="Ask Dr. Vance's AI Copilot a technical question..." autocomplete="off">
+            <button id="chat-send-btn" class="btn btn-primary">
+              <i class="fas fa-paper-plane mr-1"></i> Send
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           DEVELOPER CLI TERMINAL
+           ========================================== -->
+      <section id="terminal" class="py-20">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="badge-pill bg-purple-500/10 text-purple-400 border border-purple-500/30 mb-3">
+            <i class="fas fa-terminal mr-2"></i>Command-Line Interface
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Interactive Developer Console
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            Prefer the command line? Type <code class="text-cyan-400">help</code> to inspect system commands, view patents, or trigger file downloads.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto terminal-wrapper">
+          <div class="terminal-titlebar">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="text-xs font-mono text-gray-400">guest@nexus-ai: /home/alex-vance</div>
+            <div class="text-xs font-mono text-cyan-400">BASH 5.2</div>
+          </div>
+
+          <div id="terminal-output" class="terminal-body">
+            <div class="terminal-line text-cyan-300 font-mono text-xs mb-2">
+              * NEXUS-OS v4.12.0 LTS (x86_64-pc-linux-gnu)<br>
+              * All ML model nodes operational. Type <strong class="text-white underline">help</strong> for available commands.
+            </div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="text-cyan-400 font-mono text-xs">guest@nexus-ai:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input-field" placeholder="type 'help', 'skills', 'ecosystem', 'metrics', or 'projects'..." autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           CONTACT & DIRECT TRANSMISSION
+           ========================================== -->
+      <section id="contact" class="py-20">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="badge-pill bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 mb-3">
+            <i class="fas fa-envelope mr-2"></i>Initiate Collaboration
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Direct Encrypted Transmission
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            Available for Principal AI/ML Architect opportunities, executive advisory consulting, and AI keynote lectures.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto glass-panel p-8">
+          <form id="contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="ctrl-label">Your Name / Title</label>
+                <input type="text" id="contact-name" class="input-cyber" placeholder="e.g. Elena Rostova, VP Engineering" required>
+              </div>
+              <div>
+                <label class="ctrl-label">Corporate Email Address</label>
+                <input type="email" id="contact-email" class="input-cyber" placeholder="name@company.com" required>
+              </div>
+            </div>
+
+            <div>
+              <label class="ctrl-label">Inquiry Classification</label>
+              <select id="contact-topic" class="input-cyber">
+                <option value="architect">Principal / Staff AI Architect Role</option>
+                <option value="advisory">Enterprise Advisory Consulting</option>
+                <option value="keynote">Technical Keynote / Guest Lecture</option>
+                <option value="research">Research Collaboration & Paper Review</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="ctrl-label">Transmission Payload / Requirements</label>
+              <textarea id="contact-message" rows="4" class="input-cyber resize-none" placeholder="Detail your project scale, architecture challenge, or consultation goals..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full">
+              <i class="fas fa-paper-plane mr-2"></i> Dispatch Transmission
+            </button>
+          </form>
+
+          <div class="mt-8 pt-6 border-t border-slate-800 flex flex-wrap justify-between items-center text-xs text-gray-400 font-mono">
+            <div>
+              <i class="fas fa-map-marker-alt text-cyan-400 mr-1"></i> San Francisco Bay Area, CA / Worldwide Remote
+            </div>
+            <div class="flex gap-4 mt-2 sm:mt-0">
+              <a href="mailto:alex.vance.ai@nexus-intel.com" class="hover:text-cyan-400"><i class="fas fa-envelope mr-1"></i> Email</a>
+              <a href="https://linkedin.com" target="_blank" class="hover:text-cyan-400"><i class="fab fa-linkedin mr-1"></i> LinkedIn</a>
+              <a href="https://github.com" target="_blank" class="hover:text-cyan-400"><i class="fab fa-github mr-1"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-10 text-center font-mono text-xs text-gray-500">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div>
+          &copy; 2026 Dr. Alex Vance, Ph.D. // NEXUS.AI. All rights reserved.
+        </div>
+        <div class="text-cyan-400/80">
+          Engineered with Zero-Lag Canvas, Procedural Web Audio & Real-Time MLOps Telemetry
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================
+       MODALS & TOAST CONTAINERS
+       ========================================== -->
+  
+  <!-- Ecosystem Architecture Inspector Modal -->
+  <div id="ecosystem-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <button id="close-ecosystem-modal" class="modal-close" title="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="ecosystem-modal-content">
+        <!-- Injected dynamically by ecosystem-hub.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CV / Resume Modal -->
+  <div id="cv-modal" class="modal-overlay hidden">
+    <div class="modal-card max-w-2xl">
+      <button id="close-cv-modal" class="modal-close" title="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="badge-pill bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 mb-2">CURRICULUM VITAE</div>
+      <h2 class="text-2xl font-bold text-white mb-1">Dr. Alex Vance, Ph.D.</h2>
+      <p class="text-cyan-400 font-mono text-sm mb-4">Principal AI/ML Architect & Senior Staff Engineer</p>
+
+      <div class="space-y-4 text-sm text-gray-300 font-sans border-y border-slate-800 py-4 my-4 max-h-[50vh] overflow-y-auto">
+        <div>
+          <h4 class="text-white font-bold font-mono text-xs uppercase text-cyan-400">Executive Summary</h4>
+          <p class="mt-1">Over 10 years of software engineering & AI architecture excellence. Specializing in high-throughput LLM serving clusters, distributed training pipelines on Ray/PyTorch FSDP, sub-millisecond edge vision, and enterprise MLOps across Healthcare, FinTech, and IoT.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold font-mono text-xs uppercase text-cyan-400">Key Patents Granted</h4>
+          <ul class="list-disc pl-5 mt-1 space-y-1 text-xs font-mono text-gray-400">
+            <li>US Patent 11,842,910: Distributed Key-Value Cache Eviction for Paged Transformer Attention</li>
+            <li>US Patent 11,490,211: Ultra-Low Power Temporal Graph Convolutional Anomaly Detectors</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold font-mono text-xs uppercase text-cyan-400">Education</h4>
+          <p class="mt-1 font-mono text-xs">Ph.D. in Computer Science (Distributed AI & Systems) — MIT / Stanford Fellow<br>B.S. in Electrical Engineering & Computer Science — UC Berkeley</p>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <button onclick="exportResumePDF()" class="btn btn-primary flex-1">
+          <i class="fas fa-print mr-2"></i> Print / Save as PDF
+        </button>
+        <button onclick="exportResumeJSON()" class="btn btn-secondary flex-1">
+          <i class="fas fa-code mr-2"></i> Export JSON-LD Profile
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- Application Scripts -->
+  <script src="./audio.js"></script>
+  <script src="./neural-bg.js"></script>
+  <script src="./ecosystem-hub.js"></script>
+  <script src="./neural-playground.js"></script>
+  <script src="./vector-explorer.js"></script>
+  <script src="./vision-simulator.js"></script>
+  <script src="./drift-simulator.js"></script>
+  <script src="./ai-assistant.js"></script>
+  <script src="./terminal.js"></script>
+  <script src="./app.js"></script>
+
+</body>
+</html>
